@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>AngularJSで遊ぼう！</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    </head>
+    <body ng-controller="myController as ctrl" ng-cloak>
+        <input type="text" ng-model="ctrl.message">
+        {{ ctrl.message }}
+        <script src="angularTest.js"></script>
+    </body>
+</html>
