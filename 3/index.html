@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>AngularJSで遊ぼう！</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    </head>
+    <body ng-controller="myController as ctrl" ng-cloak>
+        <div>
+            {{ ctrl.count }}
+        </div>
+        <div>
+            <button ng-click="ctrl.addCount(1)">+1</button>
+            <button ng-click="ctrl.addCount(10)">+10</button>
+        </div>
+        <div>
+            <input type="number" ng-model="ctrl.n">
+            <button ng-click="ctrl.addCount(ctrl.n)">+{{ ctrl.n }}</button>
+        </div>
+        <div>
+            <button ng-click="ctrl.reset()">RESET</button>
+        </div>
+        <script src="test.js"></script>
+    </body>
+</html>

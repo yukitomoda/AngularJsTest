@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>AngularJSで遊ぼう！</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    </head>
+    <body ng-controller="myController as ctrl" ng-cloak>
+        <input type="text" ng-model="ctrl.input">
+        <button ng-click="ctrl.addTodo(ctrl.input)">＋</button>
+        <ul>
+            <li ng-repeat="todo in ctrl.todoList">
+                <input type="checkbox" ng-model="todo.done">
+                {{ todo.text }}
+            </li>
+        </ul>
+        <button ng-click="ctrl.clearDoneItems()">終わったTODOを消去</button>
+        <script src="test.js"></script>
+    </body>
+</html>
